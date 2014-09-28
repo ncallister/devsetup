@@ -1,0 +1,3 @@
+# Bash variables for global use
+SVNROOT=svn+ssh://svnhost/home/developer/projects/iwsvn
+export SVNROOT
