@@ -1,13 +1,1 @@
-'exception-reporting':
-  'userId': '43569d40-5946-6513-5841-7daf3c9e109c'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': '5d33c53a1ea7798db4eb769c786460254d121c07'
-'editor':
-  'fontSize': 14
-  'showIndentGuide': true
-  'showInvisibles': true
-  'softWrap': true
-  'invisibles': {}
-'core': {}
+{}
