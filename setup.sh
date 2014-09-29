@@ -11,6 +11,8 @@ link_file()
   FILE="$BASE_DIR/$1"
   DESTINATION="$HOME_DIR/$2"
 
+  mkdir -p "$(dirname "$DESTINATION")"
+
   if test -f "$DESTINATION"; then
     CONFIRM=" "
 

@@ -1,3 +1,7 @@
 # Bash variables for global use
-SVNROOT=svn+ssh://svnhost/home/developer/projects/iwsvn
+SVNROOT="svn+ssh://svnhost/home/developer/projects/iwsvn"
 export SVNROOT
+WORK_DIR="$(cd ~/Work; pwd)"
+export WORK_DIR
+TEMP_DIR="$(cd ~/tmp; pwd)"
+export TEMP_DIR
