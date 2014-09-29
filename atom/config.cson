@@ -1,1 +1,12 @@
-{}
+'exception-reporting':
+  'userId': '67aa87c9-4f10-8aec-2d77-61d3a2a019e6'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '5afe01d925f56ca54ea8945b2cce677f8755be3a'
+'core': {}
+'editor':
+  'invisibles': {}
+  'showIndentGuide': true
+  'showInvisibles': true
+  'fontSize': 14
