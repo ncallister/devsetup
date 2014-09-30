@@ -5,8 +5,5 @@ ssh-add ~/.ssh/github
 
 davmail &
 
-# sudo npm --global update
-
-atomupdate.sh
-svnupdate.sh
-
+~/scripts/atomupdate.sh
+~/scripts/svnupdate.sh
