@@ -4,9 +4,10 @@
   'showOnStartup': false
 'metrics':
   'userId': '5afe01d925f56ca54ea8945b2cce677f8755be3a'
-'core': {}
 'editor':
-  'invisibles': {}
   'showIndentGuide': true
   'showInvisibles': true
   'fontSize': 14
+  'invisibles': {}
+'find-and-replace':
+  'openProjectFindResultsInRightPane': true

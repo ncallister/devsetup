@@ -14,8 +14,10 @@ git fetch -v --all --prune
 
 LATEST_GIT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
 LATEST_VERSION="${LATEST_GIT_TAG#v}"
-INSTALLED_VERSION=$(atom --version)
-INSTALLED_VERSION="${INSTALLED_VERSION%%-*}"
+if atom --version; then
+  INSTALLED_VERSION=$(atom --version)
+  INSTALLED_VERSION="${INSTALLED_VERSION%%-*}"
+fi
 
 if test "$LATEST_VERSION" != "$INSTALLED_VERSION"; then
     git checkout "$LATEST_GIT_TAG"
