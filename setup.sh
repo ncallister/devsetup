@@ -6,8 +6,18 @@ set -x
 BASE_DIR="$(cd "$(dirname $0)"; pwd)"
 HOME_DIR="$(cd ~; pwd)"
 
+UNINSTALL="false"
+if test "$1" = "--uninstall"; then
+  UNINSTALL="true"
+fi
+
 link_file()
 {
+  if test "$UNINSTALL" = "true"; then
+    unlink_file "$1" "$2"
+    return $?
+  fi
+
   FILE="$BASE_DIR/$1"
   DESTINATION="$HOME_DIR/$2"
 
@@ -32,6 +42,20 @@ link_file()
 
   if ! test -f "$DESTINATION"; then
     ln -s "$FILE" "$DESTINATION"
+  fi
+}
+
+unlink_file()
+{
+  FILE="$BASE_DIR/$1"
+  DESTINATION="$HOME_DIR/$2"
+
+  if file "${DESTINATION}" | grep "symbolic link to \`${FILE}'"; then
+    echo "Unlinking and restoring ${DESTINATION}"
+    rm -f "${DESTINATION}";
+    cp "${FILE}" "${DESTINATION}"
+  else
+    echo "File \"${DESTINATION}\" is not a symlink to \"${FILE}\""
   fi
 }
 
